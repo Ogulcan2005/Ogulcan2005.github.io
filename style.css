@@ -63,3 +63,18 @@ body {
   section ul{
     font-size: 20px;
   }
+
+  img{
+    width: 420px; 
+    height: 240px;
+  }
+
+  img.game{
+    width: 300px;
+    height: 310px;
+  }
+
+  img.python{
+    width: 420px;
+    height: 280px;
+  }

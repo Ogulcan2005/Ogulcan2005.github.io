@@ -78,3 +78,8 @@ body {
     width: 420px;
     height: 280px;
   }
+
+  video{
+    width: 420px; 
+    height: 240px;
+  }

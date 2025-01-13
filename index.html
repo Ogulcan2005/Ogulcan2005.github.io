@@ -3,78 +3,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Mijn Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in',
+            'slide-in': 'slideIn 0.5s ease-out',
+            'slide-in-right': 'slideInRight 0.5s ease-out'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideIn: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' }
+            },
+            slideInRight: {
+              '0%': { transform: 'translateX(20px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <title>Ogulcan Dinc - Portfolio</title>
 </head>
-<body>
-  <header>
-    <h1>Mijn Portfolio</h1>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+    <div class="container mx-auto px-4 py-20">
+      <div class="max-w-4xl mx-auto text-center animate-fade-in">
+        <h1 class="text-5xl font-bold mb-6 hover:scale-105 transition-transform">Ogulcan Dinc</h1>
+        <p class="text-xl text-blue-100 mb-8">Software Developer Student @ Da Vinci College</p>
+        <div class="flex justify-center space-x-4">
+          <a href="https://github.com/Ogulcan2005" 
+             class="inline-flex items-center px-6 py-3 bg-white text-blue-800 rounded-lg hover:bg-blue-50 transition-all hover:scale-105 hover:shadow-lg">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            GitHub Profiel
+          </a>
+          <a href="contact.html" 
+             class="inline-flex items-center px-6 py-3 bg-white text-blue-800 rounded-lg hover:bg-blue-50 transition-all hover:scale-105 hover:shadow-lg">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
   </header>
-  
-  <section>
-    <h2>Over Mij</h2>
-    <p>Mijn naam is Ogulcan Dinc. Ik ben 17 jaar. Ik ben een eerstejaars student aan het Da Vinci College, waar ik de opleiding Software Developer volg. Ik heb ervaring met verschillende programmeertalen, waaronder Python, JavaScript, HTML, CSS en PHP. Ik ben gepassioneerd door het bouwen van webapplicaties en het verkennen van nieuwe technologieën.</p>
-    <p>In mijn vrije tijd werk ik aan interessante projecten en blijf ik mijn vaardigheden ontwikkelen om een succesvolle software ontwikkelaar te worden.</p>
-  </section>
-  
-  <section>
-    <h2>Opleiding</h2>
-    <p>Software Developer</p>
-  </section>
 
-  <section>
-    <h2>School</h2>
-    <p>Da Vinci College</p>
-  </section>
-  
-  <section>
-    <h2>Werkervaring</h2>
-    <p>Bedrijf: Dirk</p> 
-    <p>Functie: Vakkenvuller</p>
-    <p>2022 tot heden</p>
-  </section>
-  
-  <section>
-    <h2>Vaardigheden</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Python</li>
-      <li>Beetje PHP</li>
-      <li>Samenwerken</li>
-      <li>communicatie</li>
-    </ul>
-  </section>
-  
-  <section>
-    <h2>Projecten</h2>
-    <p>Hier zijn enkele van mijn recente projecten:</p>
-    <ul>
-      <li>
-        <h3>Project 1</h3>
-        <a href="project1.html">Eigen game</a>
-      </li>
-      <li>
-        <h3>Project 2</h3>
-        <a href="project2.html">MoveTank</a>
-      </li>
-      <li>
-        <h3>Project 3</h3>
-        <a href="project3.html">Treasure hunt</a>
-      </li>
-    </ul>
-  </section>
-  
-  <section>
-    <h2>Mijn GitHub</h2>
-    <ul>
-      <li><a href="https://github.com/Ogulcan2005">GitHub</a></li>
-    </ul>
-  </section>
-  
-  <footer>
-    <p>&copy; 2023 Ogulcan Dinc. Alle rechten voorbehouden.</p>
+  <main class="container mx-auto px-4 py-12 max-w-6xl">
+    <!-- Over Mij Section -->
+    <section class="mb-16 animate-slide-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+        <h2 class="text-3xl font-bold mb-6 text-blue-800">Over Mij</h2>
+        <div class="text-gray-600 space-y-4">
+          <p>Mijn naam is Ogulcan Dinc. Ik ben 17 jaar. Ik ben een eerstejaars student aan het Da Vinci College, waar ik de opleiding Software Developer volg. Ik heb ervaring met verschillende programmeertalen, waaronder Python, JavaScript, HTML, CSS en PHP. Ik ben gepassioneerd door het bouwen van webapplicaties en het verkennen van nieuwe technologieën.</p>
+          <p>In mijn vrije tijd werk ik aan interessante projecten en blijf ik mijn vaardigheden ontwikkelen om een succesvolle software ontwikkelaar te worden.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Experience Grid -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <!-- Vaardigheden -->
+      <section class="animate-slide-in" style="animation-delay: 100ms;">
+        <div class="bg-white rounded-2xl shadow-xl p-8 h-full hover:shadow-2xl transition-shadow">
+          <h2 class="text-3xl font-bold mb-6 text-blue-800">Vaardigheden</h2>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full hover:bg-blue-200 transition-colors">HTML</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full hover:bg-blue-200 transition-colors">CSS</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full hover:bg-blue-200 transition-colors">JavaScript</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full hover:bg-blue-200 transition-colors">Python</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full hover:bg-blue-200 transition-colors">PHP</span>
+            <span class="px-4 py-2 bg-green-100 text-green-800 rounded-full hover:bg-green-200 transition-colors">Samenwerken</span>
+            <span class="px-4 py-2 bg-green-100 text-green-800 rounded-full hover:bg-green-200 transition-colors">Communicatie</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Werkervaring -->
+      <section class="animate-slide-in" style="animation-delay: 200ms;">
+        <div class="bg-white rounded-2xl shadow-xl p-8 h-full hover:shadow-2xl transition-shadow">
+          <h2 class="text-3xl font-bold mb-6 text-blue-800">Werkervaring</h2>
+          <div class="border-l-4 border-blue-500 pl-4">
+            <h3 class="font-semibold text-xl text-gray-800">Vakkenvuller</h3>
+            <p class="text-blue-600 font-medium">Dirk</p>
+            <p class="text-gray-600">2022 tot heden</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Projecten -->
+    <section class="mb-16 animate-slide-in" style="animation-delay: 300ms;">
+      <h2 class="text-3xl font-bold mb-8 text-blue-800">Mijn Projecten</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <a href="project1.html" class="group">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-1">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors">Eigen Game</h3>
+              <p class="text-gray-600 mb-4">Een zelfgebouwd 4-persoons schaakspel met unieke spelregels en karakters.</p>
+              <span class="text-blue-600 group-hover:text-blue-800 transition-colors inline-flex items-center">
+                Bekijk project
+                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="project2.html" class="group">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-1">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors">MoveTank</h3>
+              <p class="text-gray-600 mb-4">Een interactieve tank-besturing met sprite animaties en toetsenbordbesturing.</p>
+              <span class="text-blue-600 group-hover:text-blue-800 transition-colors inline-flex items-center">
+                Bekijk project
+                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="project3.html" class="group">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-1">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors">Treasure Hunt</h3>
+              <p class="text-gray-600 mb-4">Een Python avonturenspel waarin spelers samenwerken om een schat te vinden.</p>
+              <span class="text-blue-600 group-hover:text-blue-800 transition-colors inline-flex items-center">
+                Bekijk project
+                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Opleiding -->
+    <section class="animate-slide-in" style="animation-delay: 400ms;">
+      <div class="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+        <h2 class="text-3xl font-bold mb-6 text-blue-800">Opleiding</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-xl text-gray-800">Software Developer</h3>
+            <p class="text-blue-600">Opleiding</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-xl text-gray-800">Da Vinci College</h3>
+            <p class="text-blue-600">School</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-4">&copy; 2023 Ogulcan Dinc. Alle rechten voorbehouden.</p>
+      <a href="contact.html" class="text-blue-300 hover:text-blue-100 transition-colors">Contact</a>
+    </div>
   </footer>
 </body>
 </html>

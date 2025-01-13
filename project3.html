@@ -3,22 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Mijn Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in',
+            'slide-in': 'slideIn 0.5s ease-out',
+            'bounce-in': 'bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+            'slide-in-right': 'slideInRight 0.5s ease-out'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideIn: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' }
+            },
+            bounceIn: {
+              '0%': { transform: 'scale(0.3)', opacity: '0' },
+              '50%': { transform: 'scale(1.05)' },
+              '70%': { transform: 'scale(0.9)' },
+              '100%': { transform: 'scale(1)', opacity: '1' }
+            },
+            slideInRight: {
+              '0%': { transform: 'translateX(20px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      padding: 2rem;
+    }
+    .modal.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      max-width: 90%;
+      max-height: 90vh;
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  </style>
+  <title>Project 3 - Treasure Hunt</title>
 </head>
-<body>
-  <header>
-    <h1>Project 3</h1>
+<body class="bg-gray-100">
+  <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4 animate-fade-in">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold mb-4 hover:scale-105 transition-transform">Project 3 - Treasure Hunt</h1>
+      <a href="index.html" class="inline-flex items-center text-white hover:text-blue-200 transition-all hover:translate-x-2">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Terug naar Portfolio
+      </a>
+    </div>
   </header>
-  <section>
-    <p>Het derde project is een volledig avontuur gemaakt in Python waarin je met andere mensen op zoek gaan naar een schat. Er komen investeerders en andere vrienden in voor.</p>
-    <p>Het bestand "tha.py" is gemaakt door mijn docent, maar ik moest het hele functiebestand programmeren om het volledige programma goed te laten werken en enkele wijzigingen aan te brengen in de gegevens, zodat de informatie en berekeningen klopten.</p>
-    <br></br>
-    <img class="python" src="funtions.png" alt="funtions"> <img class="python" src="tha.png" alt="programma">
-    <br></br>
-    <p>Hier is de github link die u naar het spel zal leiden.</p>
-    <a href="https://github.com/Ogulcan2005/Leren-programmeren/tree/main/Python/Module%205/Deel%202/Treasure_hunt">Github</a>
-  </section>
 
+  <main class="container mx-auto px-4 py-8 max-w-4xl">
+    <article class="bg-white rounded-lg shadow-lg p-8 mb-8 animate-slide-in hover:shadow-xl transition-shadow">
+      <div class="prose max-w-none">
+        <div class="space-y-4 text-gray-700">
+          <p class="hover:text-blue-800 transition-colors">Het derde project is een volledig avontuur gemaakt in Python waarin je met andere mensen op zoek gaan naar een schat. Er komen investeerders en andere vrienden in voor.</p>
+          <p class="hover:text-blue-800 transition-colors">Het bestand "tha.py" is gemaakt door mijn docent, maar ik moest het hele functiebestand programmeren om het volledige programma goed te laten werken en enkele wijzigingen aan te brengen in de gegevens, zodat de informatie en berekeningen klopten.</p>
+        </div>
+
+        <div class="my-8 grid md:grid-cols-2 gap-6">
+          <div class="rounded-lg shadow-lg overflow-hidden bg-gray-50 p-4 transform hover:scale-105 transition-all duration-300 animate-slide-in-right" style="animation-delay: 100ms;">
+            <img class="w-full h-full object-contain hover:opacity-90 transition-opacity cursor-pointer" onclick="openModal(this.src)" src="funtions.png" alt="Python functies code" />
+          </div>
+          <div class="rounded-lg shadow-lg overflow-hidden bg-gray-50 p-4 transform hover:scale-105 transition-all duration-300 animate-slide-in-right" style="animation-delay: 200ms;">
+            <img class="w-full h-full object-contain hover:opacity-90 transition-opacity cursor-pointer" onclick="openModal(this.src)" src="tha.png" alt="Python programma code" />
+          </div>
+        </div>
+
+        <div class="mt-8 animate-bounce-in" style="animation-delay: 300ms;">
+          <p class="text-gray-700 mb-4">Hier is de GitHub link die u naar het project zal leiden:</p>
+          <a href="https://github.com/Ogulcan2005/Leren-programmeren/tree/main/Python/Module%205/Deel%202/Treasure_hunt" 
+             class="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all hover:scale-105 hover:shadow-lg group">
+            <svg class="w-5 h-5 mr-2 group-hover:animate-bounce" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            Bekijk project op GitHub
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-6 px-4 animate-fade-in" style="animation-delay: 400ms;">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2023 Ogulcan Dinc. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <!-- Modal voor grote afbeeldingen -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img id="modalImage" class="modal-content" src="" alt="Vergrote afbeelding">
+  </div>
+
+  <script>
+    function openModal(imgSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      modal.classList.add('active');
+      modalImg.src = imgSrc;
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('active');
+    }
+
+    // Sluit modal met Escape toets
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html>

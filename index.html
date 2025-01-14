@@ -65,9 +65,14 @@
     <section class="mb-16 animate-slide-in">
       <div class="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
         <h2 class="text-3xl font-bold mb-6 text-blue-800">Over Mij</h2>
-        <div class="text-gray-600 space-y-4">
-          <p>Mijn naam is Ogulcan Dinc. Ik ben 19 jaar. Ik ben een eerstejaars student aan het Da Vinci College in Dordrecht, waar ik de opleiding Software Developer volg. Ik heb ervaring met verschillende programmeertalen, waaronder Python, JavaScript, HTML, CSS, PHP, C# en Laravel. Ik ben gepassioneerd door het bouwen van webapplicaties en het verkennen van nieuwe technologieën.</p>
-          <p>In mijn vrije tijd werk ik aan interessante projecten en blijf ik mijn vaardigheden ontwikkelen om een succesvolle software ontwikkelaar te worden.</p>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="text-gray-600 space-y-4">
+            <p>Mijn naam is Ogulcan Dinc. Ik ben 19 jaar. Ik ben een eerstejaars student aan het Da Vinci College in Dordrecht, waar ik de opleiding Software Developer volg. Ik heb ervaring met verschillende programmeertalen, waaronder Python, JavaScript, HTML, CSS, PHP, C# en Laravel. Ik ben gepassioneerd door het bouwen van webapplicaties en het verkennen van nieuwe technologieën.</p>
+            <p>In mijn vrije tijd werk ik aan interessante projecten en blijf ik mijn vaardigheden ontwikkelen om een succesvolle software ontwikkelaar te worden.</p>
+          </div>
+          <div class="flex justify-center">
+            <img src="foto.jpg" alt="Ogulcan Dinc" class="rounded-xl shadow-lg w-64 h-64 object-cover transform hover:scale-105 transition-all duration-300">
+          </div>
         </div>
       </div>
     </section>
@@ -114,7 +119,20 @@
           <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-1">
             <div class="p-6">
               <h3 class="text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors">Eigen Game</h3>
-              <p class="text-gray-600 mb-4">Een zelfgebouwd 4-persoons schaakspel met unieke spelregels en karakters.</p>
+              <div class="mb-4">
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">JavaScript</span>
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">HTML5</span>
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">CSS</span>
+                </div>
+                <p class="text-gray-600">Een zelfgebouwd 4-persoons schaakspel met unieke spelregels en karakters. Het spel bevat:</p>
+                <ul class="text-gray-600 list-disc list-inside mt-2 space-y-1 text-sm">
+                  <li>Multiplayer ondersteuning voor 4 spelers</li>
+                  <li>Unieke karakters met speciale bewegingen</li>
+                  <li>Aangepaste spelregels en scoringsysteem</li>
+                  <li>Interactieve web-based interface</li>
+                </ul>
+              </div>
               <span class="text-blue-600 group-hover:text-blue-800 transition-colors inline-flex items-center">
                 Bekijk project
                 <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,7 +148,19 @@
           <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-1">
             <div class="p-6">
               <h3 class="text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors">MoveTank</h3>
-              <p class="text-gray-600 mb-4">Een interactieve tank-besturing met sprite animaties en toetsenbordbesturing.</p>
+              <div class="mb-4">
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">JavaScript</span>
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">HTML5</span>
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">CSS</span>
+                </div>
+                <p class="text-gray-600">Een interactieve tank-besturing met sprite animaties. Features:</p>
+                <ul class="text-gray-600 list-disc list-inside mt-2 space-y-1 text-sm">
+                  <li>Soepele toetsenbordbesturing</li>
+                  <li>Sprite-based animaties voor beweging</li>
+                  <li>Collision detection systeem</li>
+                </ul>
+              </div>
               <span class="text-blue-600 group-hover:text-blue-800 transition-colors inline-flex items-center">
                 Bekijk project
                 <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,7 +176,18 @@
           <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-1">
             <div class="p-6">
               <h3 class="text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors">Treasure Hunt</h3>
-              <p class="text-gray-600 mb-4">Een Python avonturenspel waarin spelers samenwerken om een schat te vinden.</p>
+              <div class="mb-4">
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Python</span>
+                  <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">OOP</span>
+                </div>
+                <p class="text-gray-600">Een Python avonturenspel met focus op teamwork. Features:</p>
+                <ul class="text-gray-600 list-disc list-inside mt-2 space-y-1 text-sm">
+                  <li>Multiplayer samenwerking</li>
+                  <li>Investeerders en vrienden systeem</li>
+                  <li>Dynamische spelwereld met schatten</li>
+                </ul>
+              </div>
               <span class="text-blue-600 group-hover:text-blue-800 transition-colors inline-flex items-center">
                 Bekijk project
                 <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
